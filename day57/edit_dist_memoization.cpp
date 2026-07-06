@@ -11,7 +11,7 @@ public:
         if(s[i]==t[j]) return dp[i][j] = fun(i-1,j-1,s,t,dp);
 
         return dp[i][j] = 1 + min(fun(i-1,j-1,s,t,dp),min(fun(i,j-1,s,t,dp),fun(i-1,j,s,t,dp)));
-                            //        replace                 insert              delete
+                         //        replace                 insert              delete
     }
 
     int minDistance(string word1, string word2) {
